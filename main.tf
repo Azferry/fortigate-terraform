@@ -23,3 +23,12 @@ module "fw_system" {
   system_alias       = var.system_alias
   system_hostname    = var.system_hostname
 }
+
+module "fw_objects" {
+  source                 = "./objects"
+  geo_locations          = var.geo_locations
+  service_objects        = var.service_objects
+  address_grp_shared_srv = var.address_grp_shared_srv
+  address_iot_groups     = var.address_iot_groups
+  schedule_objects       = var.schedule_objects
+}
